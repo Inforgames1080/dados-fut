@@ -1,0 +1,46 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Exemplo de dados fictícios da Premier League
+data = {
+    'Time': ['Arsenal', 'Chelsea', 'Liverpool', 'Man City', 'Man United', 'Tottenham', 'Nottingham', 'Newcastle', 'Bournemouth', 'Aston Villa', 
+             'Brighton Hove', 'Fulham', 'Brentford', 'Crystal Palace', 'Everton', 'West Ham', 'Wolverhampton', 'Ipswich Town', 'Leicester City', 
+             'Southampton'],
+    'Gols_Marcados': [51, 48, 64, 52, 30, 53, 44, 46, 44, 39, 42, 38, 47, 32, 33, 30, 36, 24, 25, 19],
+    'Gols_Sofridos': [23, 36, 26, 37, 37, 38, 33, 36, 30, 41, 38, 35, 42, 31, 29, 47, 54, 54, 59, 61],
+    'Partidas':      [26, 26, 27, 26, 26, 26, 26, 26, 26, 27, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26]
+}
+
+# Criar DataFrame
+df = pd.DataFrame(data)
+
+# Calcular média de gols por jogo
+df['Media_Gols_Marcados'] = df['Gols_Marcados'] / df['Partidas']
+df['Media_Gols_Sofridos'] = df['Gols_Sofridos'] / df['Partidas']
+
+# Visualizar dados
+print(df)
+
+# Gráfico de barras de gols marcados
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Time', y='Gols_Marcados', data=df, palette='mako')
+plt.title('Gols Marcados por Time - Premier League', fontsize=14, weight='bold')
+plt.xlabel('Times', fontsize=12)
+plt.ylabel('Gols Marcados', fontsize=12)
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.show()
+
+# Gráfico de linha para médias de gols marcados e sofridos
+plt.figure(figsize=(10, 6))
+sns.lineplot(x='Time', y='Media_Gols_Marcados', data=df, marker='o', label='Média Gols Marcados', linewidth=2)
+sns.lineplot(x='Time', y='Media_Gols_Sofridos', data=df, marker='x', label='Média Gols Sofridos', linewidth=2)
+plt.title('Média de Gols Marcados e Sofridos por Time - Premier League', fontsize=14, weight='bold')
+plt.xlabel('Times', fontsize=12)
+plt.ylabel('Média de Gols por Jogo', fontsize=12)
+plt.xticks(rotation=45, ha='right')
+plt.legend(title='Legenda')
+plt.grid(True, linestyle='--', alpha=0.5)
+plt.tight_layout()
+plt.show()
