@@ -2,7 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Exemplo de dados  da Premier League
+# Exemplo de dados  da Premier League 2025
 data = {
     'Time': ['Arsenal', 'Chelsea', 'Liverpool', 'Man City', 'Man United', 'Tottenham', 'Nottingham', 'Newcastle', 'Bournemouth', 'Aston Villa', 
              'Brighton Hove', 'Fulham', 'Brentford', 'Crystal Palace', 'Everton', 'West Ham', 'Wolverhampton', 'Ipswich Town', 'Leicester City', 
