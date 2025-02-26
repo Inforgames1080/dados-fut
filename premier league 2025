@@ -2,14 +2,14 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Exemplo de dados  da Premier League 2025
+# Exemplo de dados fictícios da Premier League
 data = {
     'Time': ['Arsenal', 'Chelsea', 'Liverpool', 'Man City', 'Man United', 'Tottenham', 'Nottingham', 'Newcastle', 'Bournemouth', 'Aston Villa', 
              'Brighton Hove', 'Fulham', 'Brentford', 'Crystal Palace', 'Everton', 'West Ham', 'Wolverhampton', 'Ipswich Town', 'Leicester City', 
              'Southampton'],
-    'Gols_Marcados': [51, 48, 64, 52, 30, 53, 44, 46, 44, 39, 42, 38, 47, 32, 33, 30, 36, 24, 25, 19],
-    'Gols_Sofridos': [23, 36, 26, 37, 37, 38, 33, 36, 30, 41, 38, 35, 42, 31, 29, 47, 54, 54, 59, 61],
-    'Partidas':      [26, 26, 27, 26, 26, 26, 26, 26, 26, 27, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26]
+    'Gols_Marcados': [51, 52, 64, 52, 30, 53, 44, 46, 44, 39, 42, 40, 47, 32, 33, 30, 37, 24, 25, 19],
+    'Gols_Sofridos': [23, 36, 26, 37, 37, 38, 33, 36, 30, 41, 38, 36, 42, 31, 29, 47, 56, 54, 59, 65],
+    'Partidas':      [26, 27, 27, 26, 26, 26, 26, 26, 26, 27, 26, 26, 26, 26, 26, 26, 27, 26, 26, 27]
 }
 
 # Criar DataFrame
